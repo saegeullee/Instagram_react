@@ -1,0 +1,8 @@
+.UserNav {
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 15%;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2rem;
+}

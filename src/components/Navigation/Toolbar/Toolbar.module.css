@@ -1,0 +1,17 @@
+.Header {
+    display: flex;
+    justify-content: space-evenly;
+    height: 8rem;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+}
+
+.HeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    max-width: 114rem;
+    width: 100%;
+}
