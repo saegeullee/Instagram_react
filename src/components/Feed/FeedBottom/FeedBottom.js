@@ -10,7 +10,11 @@ import classes from "./FeedBottom.module.css"
 const feedBottom = props => (
 
     <div>
-        <FeedEnage />
+        <FeedEnage 
+            isLiked={props.isLiked} 
+            liked={props.liked}
+            isBookMarked={props.isBookMarked}
+            bookMarked={props.bookMarked}/>
         <FeedLikes />
         <FeedDescription />
         <FeedComment />

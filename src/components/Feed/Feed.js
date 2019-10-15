@@ -9,7 +9,12 @@ const feed = props => (
         <div className={classes.FeedItem}>
             <FeedHeader />
             <FeedMiddle />
-            <FeedBottom />
+            <FeedBottom 
+                isLiked={props.isLiked} 
+                liked={props.liked}
+                isBookMarked={props.isBookMarked}
+                bookMarked={props.bookMarked}
+                />
         </div>
     </section>
 )
