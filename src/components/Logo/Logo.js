@@ -1,5 +1,5 @@
 import React from "react";
-import WestagramLogo from "../../images/logo.PNG";
+import WestagramLogo from "../../images/logo.png";
 import classes from "./Logo.module.css";
 
 const logo = props => (

@@ -1,0 +1,14 @@
+.Container {
+    max-width: 114rem;
+    width: 100%;
+    margin: 0 auto;
+    height: 100rem;
+    display: flex;
+    justify-content: center;
+}
+
+.Main {
+
+    display: flex;
+    flex-direction: column;
+}

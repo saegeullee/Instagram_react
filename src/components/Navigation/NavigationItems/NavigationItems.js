@@ -4,9 +4,9 @@ import NavigationItem from "./NavigationItem/NavigationItem";
 
 const navigationItems = props => (
     <nav className={classes.UserNav}>
-        <NavigationItem />
-        <NavigationItem />
-        <NavigationItem />
+        <NavigationItem type="explore"/>
+        <NavigationItem type="likes" />
+        <NavigationItem type="user"/>
     </nav>
 );
 

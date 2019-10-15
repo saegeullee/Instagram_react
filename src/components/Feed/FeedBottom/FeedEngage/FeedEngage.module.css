@@ -1,0 +1,8 @@
+.FeedEngage {
+    display: flex;
+    justify-content: space-between;
+}
+
+.FeedEngageLeft {
+    display: flex;
+}

@@ -1,0 +1,10 @@
+.FeedCommentPart {
+    display: flex;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    font-size: 1.4rem;
+}
+
+.FeedComment {
+    padding-left: 1rem;
+}

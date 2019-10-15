@@ -1,0 +1,27 @@
+.ProfileImgShapeSmall {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 1rem;
+}
+
+.ProfileImgShapeBig {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 1rem;
+}
+
+.ProfileImage {
+    height: 100%;
+    margin-left: 1rem;
+    transform: translateX(-15%);
+}
