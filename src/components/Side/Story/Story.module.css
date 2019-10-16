@@ -1,0 +1,9 @@
+.Story {
+    margin-top: 1.5rem;
+    width: 30rem;
+    height: 22rem;
+    background-color: #fff;
+    border: 1px solid #f0eeee;
+    border-radius: 3px;
+    overflow-y: scroll;
+}

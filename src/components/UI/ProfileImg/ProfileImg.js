@@ -4,7 +4,7 @@ import profileImage from "../../../images/woman.jpg"
 
 const profileImg = props => (
 
-    <div className={classes.ProfileImgShapeSmall}>
+    <div className={props.size === "big" ? classes.ProfileImgShapeBig : classes.ProfileImgShapeSmall}>
         <img src={profileImage} alt="" className={classes.ProfileImage}></img>
     </div>
 

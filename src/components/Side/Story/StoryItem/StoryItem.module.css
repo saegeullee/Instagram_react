@@ -1,0 +1,20 @@
+.StoryItem {
+    display: flex;
+    margin-bottom: 1.2rem;
+}
+
+.StoryItemInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.3rem;
+}
+
+.StoryItemName {
+    font-size: 1.4rem;
+    color: #000;
+}
+
+.StoryItemTime {
+    margin-top: 0.2rem;
+    color: rgb(160, 160, 160);
+}

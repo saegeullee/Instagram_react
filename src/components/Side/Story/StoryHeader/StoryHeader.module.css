@@ -1,0 +1,17 @@
+.StoryHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.StoryHeaderTitle {
+    font-size: 1.4rem;
+    color: #333;
+    margin-left: 0.3rem;
+
+}
+
+.StoryHeaderNotice {
+    font-size: 1.2rem;
+    font-weight: bold;
+}

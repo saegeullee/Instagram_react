@@ -5,13 +5,12 @@ import FeedDescription from "./FeedDescription/FeedDescription"
 import FeedComment from "./FeedComment/FeedComment"
 import FeedDate from "./FeedDate/FeedDate"
 import FeedPostComment from "./FeedPostComment/FeedPostComment"
-import classes from "./FeedBottom.module.css"
 
 const feedBottom = props => (
 
     <div>
         <FeedEnage 
-            isLiked={props.isLiked} 
+            isLiked={props.isLiked}
             liked={props.liked}
             isBookMarked={props.isBookMarked}
             bookMarked={props.bookMarked}/>

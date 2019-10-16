@@ -1,21 +1,10 @@
 import React from "react"
-import FeedHeader from "./FeedHeader/FeedHeader"
-import FeedMiddle from "./FeedMiddle/FeedMiddle"
-import FeedBottom from "./FeedBottom/FeedBottom"
-import classes from "./Feed.module.css"
+import FeedItem from "./FeedItem/FeedItem"
 
 const feed = props => (
     <section>
-        <div className={classes.FeedItem}>
-            <FeedHeader />
-            <FeedMiddle />
-            <FeedBottom 
-                isLiked={props.isLiked} 
-                liked={props.liked}
-                isBookMarked={props.isBookMarked}
-                bookMarked={props.bookMarked}
-                />
-        </div>
+        <FeedItem />
+        <FeedItem />
     </section>
 )
 

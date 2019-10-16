@@ -1,0 +1,16 @@
+.RecommendationHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.RecommendationHeaderTitle {
+    font-size: 1.4rem;
+    color: #333;
+    margin-left: 0.3rem;
+}
+
+.RecommendationHeaderNotice {
+    font-size: 1.2rem;
+    font-weight: bold;
+}

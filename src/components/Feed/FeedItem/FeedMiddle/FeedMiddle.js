@@ -1,5 +1,5 @@
 import React from "react"
-import womanImg from "../../../images/woman.jpg"
+import womanImg from "../../../../images/woman.jpg"
 import classes from "./FeedMiddle.module.css"
 
 const feedMiddle = props => (

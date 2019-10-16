@@ -1,7 +1,6 @@
-import React, {Component} from "react";
-import Toolbar from "../Navigation/Toolbar/Toolbar";
-import Feed from "../Feed/Feed"
-import classes from "./Layout.module.css";
+import React, {Component} from "react"
+import Toolbar from "../Navigation/Toolbar/Toolbar"
+import Container from "../Container/Container"
 
 class Layout extends Component {
 
@@ -26,15 +25,12 @@ class Layout extends Component {
         return(
             <div>
                 <Toolbar />
-                <div className={classes.Container}>
-                    <main className={classes.Main}>
-                        <Feed 
-                            isLiked={this.state.isLikeBtnClicked} 
-                            liked={this.likeBtnClickHander}
-                            isBookMarked={this.state.isBookMarkBtnClicked}
-                            bookMarked={this.bookMarkBtnClickHandler} />
-                    </main>
-                </div>
+                <Container
+                    isLiked={this.state.isLikeBtnClicked} 
+                    liked={this.likeBtnClickHander}
+                    isBookMarked={this.state.isBookMarkBtnClicked}
+                    bookMarked={this.bookMarkBtnClickHandler}
+                />
             </div>
         )
     }

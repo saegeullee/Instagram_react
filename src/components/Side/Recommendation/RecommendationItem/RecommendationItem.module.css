@@ -1,0 +1,34 @@
+.RecommendationItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.RecommendationItemInfo {
+
+    display: flex;
+    flex-direction: column;
+    margin-left: -4rem;
+}
+
+.RecommendationItemName {
+
+    font-size: 1.4rem;
+    color: #000;
+}
+
+.RecommendationItemFollower {
+    margin-top: 0.2rem;
+    color: rgb(160, 160, 160);
+
+}
+
+.RecommendationItemFollowBtn {
+    margin-right: 1.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #3897f0;
+    font-weight: 1000;
+
+}
