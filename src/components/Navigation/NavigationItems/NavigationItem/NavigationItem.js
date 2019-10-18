@@ -7,6 +7,7 @@ import user from "../../../../images/user.png"
 const navigationItem = props => {
 
     let imgSrc = "";
+
     switch(props.type) {
         case "explore":
             imgSrc = <img src={explore} className={classes.UserNavImg} alt="explore"></img>

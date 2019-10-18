@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "./components/Layout/Layout";
+import Login from "./pages/Login/Login"
 
-const App = props => <Layout />;
+const App = props => <Login />;
 
 export default App;

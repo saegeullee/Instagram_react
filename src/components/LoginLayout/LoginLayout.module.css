@@ -1,0 +1,26 @@
+.Main {
+    margin-top: 20rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.LoginSection {
+    background-color: #fff;
+    width: 35rem;
+    height: 40rem;
+    border: 1px solid #e6e6e6;
+    border-radius: 1px;
+    padding: 10px 0;
+}
+
+.LoginWrapper {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.Logo {
+    display: block;
+    padding-top: 3rem;
+    margin: 0 auto;
+}
+
