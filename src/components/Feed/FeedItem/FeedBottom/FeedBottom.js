@@ -6,21 +6,28 @@ import FeedComment from "./FeedComment/FeedComment"
 import FeedDate from "./FeedDate/FeedDate"
 import FeedPostComment from "./FeedPostComment/FeedPostComment"
 
-const feedBottom = props => (
+const feedBottom = props => {
 
+    let comments = props.comments.map((el, idx) => <FeedComment key={idx} comment={el}/>)
+    
+    return(
     <div>
         <FeedEnage 
+            id={props.id}
             isLiked={props.isLiked}
             liked={props.liked}
             isBookMarked={props.isBookMarked}
             bookMarked={props.bookMarked}/>
         <FeedLikes />
         <FeedDescription />
-        <FeedComment />
-        <FeedComment />
-        <FeedComment />
+        {comments}
         <FeedDate />
-        <FeedPostComment />
+        <FeedPostComment 
+            id={props.id} 
+            commentValue={props.commentValue}
+            addComment={props.addComment}
+            handleInput={props.handleInput}/>
     </div>
-)
+    )
+}
 export default feedBottom

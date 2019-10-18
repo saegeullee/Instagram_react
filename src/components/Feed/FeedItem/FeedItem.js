@@ -5,10 +5,16 @@ import FeedBottom from "./FeedBottom/FeedBottom"
 import classes from "./FeedItem.module.css"
 
 const feedItem = props => (
+
     <div className={classes.FeedItem}>
         <FeedHeader />
         <FeedMiddle />
-        <FeedBottom 
+        <FeedBottom
+            id = {props.id} 
+            handleInput = {props.handleInput}
+            comments={props.comments}
+            commentValue={props.commentValue}
+            addComment={props.addComment}
             isLiked={props.isLiked} 
             liked={props.liked}
             isBookMarked={props.isBookMarked}

@@ -6,13 +6,17 @@ const feedEngage = props => (
 
     <div className={classes.FeedEngage}>
         <div className={classes.FeedEngageLeft}>
-            <FeedEngageItem type="like" 
+            <FeedEngageItem 
+                id={props.id}
+                type="like" 
                 isLiked={props.isLiked} 
                 liked={props.liked}/>
             <FeedEngageItem type="comment"/>
             <FeedEngageItem type="share"/>
         </div>
-        <FeedEngageItem type="bookmark"
+        <FeedEngageItem 
+                id={props.id}
+                type="bookmark"
                 isBookMarked={props.isBookMarked}
                 bookMarked={props.bookMarked}/>
     </div>

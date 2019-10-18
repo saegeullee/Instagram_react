@@ -8,7 +8,7 @@ const feedComment = props => (
             mmmmmmmmmahh
         </div>
         <div className={classes.FeedComment}>
-            댓글달기 테스트
+            {props.comment}
         </div>
     </div>
 )

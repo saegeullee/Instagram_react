@@ -1,5 +1,5 @@
 import React from "react"
-import classes from "./FeedDate.module.css"
+import classes from "./FeedDate.module.scss"
 
 const feedDate = props => (
 

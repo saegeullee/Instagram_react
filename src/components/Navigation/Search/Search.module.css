@@ -11,6 +11,11 @@
     justify-content: center;
 }
 
+.SearchImg {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
 .SearchInput {
     height: 1rem;
     font-family: inherit;

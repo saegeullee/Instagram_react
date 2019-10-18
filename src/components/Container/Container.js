@@ -6,11 +6,7 @@ import classes from "./Container.module.css"
 const container = props => (
 
     <div className={classes.Container}>
-        <Feed
-            isLiked={props.isLiked} 
-            liked={props.liked}
-            isBookMarked={props.isBookMarked}
-            bookMarked={props.bookMarked} />
+        <Feed />
         <Side />
     </div>
 
