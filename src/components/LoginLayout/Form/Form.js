@@ -3,6 +3,7 @@ import classes from "./Form.module.css"
 
 const form = props => {
 
+    console.log(props.bothFilled)
     return(
         <>
             <div className={classes.LoginForm}>
@@ -22,9 +23,9 @@ const form = props => {
                 </div>
             </div>
             <button href="" 
-            className={props.bothFilled ? [classes.LoginFormBtn, classes.LoginFormBtnActive].join(" ")
-            :classes.LoginFormBtn} 
-            id="login-form-button">로그인</button>
+                disabled={!props.bothFilled}
+                className={props.bothFilled ? classes.LoginFormBtnActive : classes.LoginFormBtn}
+                onClick={props.clicked}>로그인</button>
         </>
     )
 }

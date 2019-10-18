@@ -15,9 +15,15 @@ class LoginLayout extends Component {
         }
     }
 
+    loginBtnClickedHandler = () => {
+        console.log("clicked")
+    }
+
     loginBtnColorIndentifier = () => {
         if(this.state.email !== "" && this.state.password !== "") {
             this.setState({bothFilled : true})
+        } else {
+            this.setState({bothFilled : false})
         }
     }
 
@@ -41,9 +47,10 @@ class LoginLayout extends Component {
                     <div className={classes.LoginWrapper}>
                         <img src={LogoImg} alt="" className={classes.Logo}></img>
                         <Form
+                            clicked={this.loginBtnClickedHandler}
                             emailInput={this.emailInputHandler} 
                             passwordInput={this.passwordInputHandler}
-                            bothFilled={this.bothFilled}/>
+                            bothFilled={this.state.bothFilled}/>
                         <Others />
                     </div>
                 </div>
