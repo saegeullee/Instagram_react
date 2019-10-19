@@ -1,9 +1,9 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import classes from "./Form.module.css"
 
 const form = props => {
 
-    console.log(props.bothFilled)
     return(
         <>
             <div className={classes.LoginForm}>
@@ -22,10 +22,10 @@ const form = props => {
                     </input>
                 </div>
             </div>
-            <button href="" 
+            <Link to="/home"
                 disabled={!props.bothFilled}
                 className={props.bothFilled ? classes.LoginFormBtnActive : classes.LoginFormBtn}
-                onClick={props.clicked}>로그인</button>
+                onClick={props.clicked}>로그인</Link>
         </>
     )
 }

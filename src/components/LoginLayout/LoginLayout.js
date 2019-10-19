@@ -16,7 +16,7 @@ class LoginLayout extends Component {
     }
 
     loginBtnClickedHandler = () => {
-        console.log("clicked")
+        
     }
 
     loginBtnColorIndentifier = () => {

@@ -16,7 +16,7 @@
 }
 
 .LoginFormBtn {
-    width: 100%;
+    max-width: 100%;
     margin-top: 1rem;
     padding: .8rem 1rem;
     background-color: #c4e0fb;
@@ -27,11 +27,12 @@
     font-weight: bold;
     font-size: 1.6rem;
     text-align: center;
+    text-decoration: none;
 }
 
 .LoginFormBtnActive {
     background-color: #3897f0;
-    width: 100%;
+    max-width: 100%;
     margin-top: 1rem;
     padding: .8rem 1rem;
     display: block;
@@ -41,5 +42,7 @@
     font-weight: bold;
     font-size: 1.6rem;
     text-align: center;
+    text-decoration: none;
+
 }
 
