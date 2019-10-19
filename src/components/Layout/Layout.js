@@ -70,16 +70,24 @@ class Layout extends Component {
         }
     }
 
+    hideSearchBoxHandler = () => {
+        if(this.state.isSearching) {
+            this.setState({isSearching :false})
+        }
+    }
+
     render() {
 
         return(
             <div>
                 <Toolbar
+                    hideSearchBox = {this.hideSearchBoxHandler}
                     isSearching = {this.state.isSearching}
                     searched = {this.searchHandler} 
                     users={this.state.users}
                 />
                 <Container
+                    hideSearchBox = {this.hideSearchBoxHandler}
                     feedItems = {this.state.feedItems}
                     handleInput = {this.inputBtnColorChangeHandler}
                     liked={this.likeBtnClickHandler}

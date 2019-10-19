@@ -5,7 +5,7 @@ import classes from "./Container.module.css"
 
 const container = props => (
 
-    <div className={classes.Container}>
+    <div className={classes.Container} onClick={props.hideSearchBox}>
         <Feed
             feedItems = {props.feedItems}
             handleInput = {props.handleInput}

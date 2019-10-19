@@ -5,7 +5,7 @@ import NavigationItems from "../NavigationItems/NavigationItems";
 import classes from "./Toolbar.module.css";
 
 const toolbar = props => (
-    <header className={classes.Header}>
+    <header className={classes.Header} onClick={props.hideSearchBox}>
         <div className={classes.HeaderContainer}>
             <Logo /> 
             <Search 
