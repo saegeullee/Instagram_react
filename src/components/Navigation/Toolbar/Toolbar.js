@@ -7,8 +7,11 @@ import classes from "./Toolbar.module.css";
 const toolbar = props => (
     <header className={classes.Header}>
         <div className={classes.HeaderContainer}>
-            <Logo />
-            <Search />
+            <Logo /> 
+            <Search 
+                users={props.users}
+                isSearching = {props.isSearching}
+                searched = {props.searched} />
             <NavigationItems />
         </div>
     </header>

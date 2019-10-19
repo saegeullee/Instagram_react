@@ -1,0 +1,24 @@
+.SearchItem {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    border-bottom: 1px solid #f4f2f2; 
+}
+
+.SearchItemImg {
+    width: auto;
+    height: 100%;
+    transform: translateX(-25%);
+    margin-left: 2rem;
+}
+
+.SearchItemInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.3rem;
+}
+
+.SearchItemName {
+    font-size: 1.4rem;
+    color: #000;
+}

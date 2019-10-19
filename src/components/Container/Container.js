@@ -6,7 +6,7 @@ import classes from "./Container.module.css"
 const container = props => (
 
     <div className={classes.Container}>
-        <Feed 
+        <Feed
             feedItems = {props.feedItems}
             handleInput = {props.handleInput}
             addComment={props.addComment}

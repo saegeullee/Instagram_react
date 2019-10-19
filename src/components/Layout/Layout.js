@@ -1,14 +1,16 @@
 import React, {Component} from "react"
 import Toolbar from "../Navigation/Toolbar/Toolbar"
 import Container from "../Container/Container"
-import FeedData from "../Feed/FeedData"
+import {feedData, users} from "../../data/data"
 
 class Layout extends Component {
 
     constructor() {
         super()
         this.state = {
-            feedItems : FeedData
+            feedItems : feedData,
+            users : users,
+            isSearching : false
         }
     }
 
@@ -45,18 +47,39 @@ class Layout extends Component {
         this.state.feedItems.forEach(el => {
             if(el.id === id) { 
                 el.commentValue=event.target.value;
-            }else { 
             }
         })
         this.setState({feedItems : this.state.feedItems})
+    }
+
+    searchHandler = (event) => {
+
+        const filteredUsers = []
+        this.state.users.forEach(el => {
+            el.name.startsWith(event.target.value)
+                ? filteredUsers.unshift(el)
+                : filteredUsers.push(el)
+        })
+
+        this.setState({users: filteredUsers})
+
+        if(event.target.value !== "") {
+            this.setState({isSearching : true})
+        } else {
+            this.setState({isSearching : false})
+        }
     }
 
     render() {
 
         return(
             <div>
-                <Toolbar />
-                <Container 
+                <Toolbar
+                    isSearching = {this.state.isSearching}
+                    searched = {this.searchHandler} 
+                    users={this.state.users}
+                />
+                <Container
                     feedItems = {this.state.feedItems}
                     handleInput = {this.inputBtnColorChangeHandler}
                     liked={this.likeBtnClickHandler}
@@ -68,18 +91,3 @@ class Layout extends Component {
     }
 }
 export default Layout;
-
-
-/**
- * 
-*                     key = {feedItems[idx].id}
-                    handleInput = {this.inputBtnColorChangeHandler}
-                    id = {feedItems[idx].id}
-                    commentValue={feedItems[idx].commentValue}
-                    comments = {feedItems[idx].comments}
-                    isLiked={feedItems[idx].isLikeBtnClicked} 
-                    liked={this.likeBtnClickHandler}
-                    isBookMarked={feedItems[idx].isBookMarkBtnClicked}
-                    addComment={this.addCommentHandler}
-                    bookMarked={this.bookMarkBtnClickHandler}
- */

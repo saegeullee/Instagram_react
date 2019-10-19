@@ -39,6 +39,20 @@
 }
 
 .SearchResult {
+    position: absolute;
+    top: 3rem;
+    left: -1rem;
+    margin-top: 1.5rem;
+    width: 25rem;
+    height: 22rem;
+    background-color: #fff;
+    border: 1px solid #f0eeee;
+    border-radius: 3px;
+    overflow-y: scroll;
+    z-index: 1;
+}
+
+.SearchResultNone {
     display: none;
     position: absolute;
     top: 3rem;
