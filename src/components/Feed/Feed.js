@@ -17,7 +17,11 @@ const feed = props => {
             handleInput = {props.handleInput}
             liked={props.liked}
             bookMarked={props.bookMarked}
-            addComment={props.addComment} />)
+            addComment={props.addComment} 
+            isMenuClicked = {props.isMenuClicked}
+            menuClicked = {props.menuClicked}
+            hideTemporarilyShownElement = {props.hideTemporarilyShownElement}
+            />)
 
         return(
             <section>

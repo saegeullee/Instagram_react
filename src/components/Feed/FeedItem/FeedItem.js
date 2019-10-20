@@ -7,7 +7,11 @@ import classes from "./FeedItem.module.css"
 const feedItem = props => (
 
     <div className={classes.FeedItem}>
-        <FeedHeader /> 
+        <FeedHeader 
+            isMenuClicked = {props.isMenuClicked}
+            menuClicked = {props.menuClicked}
+            hideTemporarilyShownElement = {props.hideTemporarilyShownElement}
+        /> 
         <FeedMiddle />
         <FeedBottom
             id = {props.id} 

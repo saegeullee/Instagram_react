@@ -11,7 +11,8 @@ class Layout extends Component {
             feedItems : feedData,
             users : users,
             usersForStory : users,
-            isSearching : false
+            isSearching : false,
+            isMenuClicked : false
         }
     }
 
@@ -71,9 +72,18 @@ class Layout extends Component {
         }
     }
 
-    hideSearchBoxHandler = () => {
+    hideTemporarilyShownElementsHandler = () => {
         if(this.state.isSearching) {
             this.setState({isSearching :false})
+        }
+        if(this.state.isMenuClicked) {
+            this.setState({isMenuClicked : false})
+        }
+    }
+
+    feedMenuClickHandler = () => {
+        if(!this.state.isMenuClicked) {
+            this.setState({isMenuClicked: true})
         }
     }
 
@@ -82,14 +92,16 @@ class Layout extends Component {
         return(
             <div>
                 <Toolbar
-                    hideSearchBox = {this.hideSearchBoxHandler}
+                    hideTemporarilyShownElement = {this.hideTemporarilyShownElementsHandler}
                     isSearching = {this.state.isSearching}
                     searched = {this.searchHandler} 
                     users={this.state.users}
                 />
                 <Container
                     users={this.state.usersForStory}
-                    hideSearchBox = {this.hideSearchBoxHandler}
+                    isMenuClicked = {this.state.isMenuClicked}
+                    menuClicked = {this.feedMenuClickHandler}
+                    hideTemporarilyShownElement = {this.hideTemporarilyShownElementsHandler}
                     feedItems = {this.state.feedItems}
                     handleInput = {this.inputBtnColorChangeHandler}
                     liked={this.likeBtnClickHandler}
