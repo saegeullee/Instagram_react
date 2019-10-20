@@ -7,7 +7,7 @@ import classes from "./FeedItem.module.css"
 const feedItem = props => (
 
     <div className={classes.FeedItem}>
-        <FeedHeader />
+        <FeedHeader /> 
         <FeedMiddle />
         <FeedBottom
             id = {props.id} 

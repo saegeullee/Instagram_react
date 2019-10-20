@@ -1,0 +1,44 @@
+.FeedComment {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e6e6e6;
+
+    &__Input {
+        flex: 0 0 85%;
+        height: 5rem;
+        border: none;
+
+        &::-webkit-input-placeholder {
+            padding-left: 1rem;
+        }
+    }
+
+    &__Btn___Activated {
+        color: #0988ff;
+        text-decoration: none;
+        font-size: 1.4rem;
+        padding: 1rem;
+        margin-right: 2rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border: none;
+    }
+
+    &__Btn___Deactivated {
+        color: #cbe4fb;
+        text-decoration: none;
+        font-size: 1.4rem;
+        padding: 1rem;
+        margin-right: 2rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border: none;
+    }
+    
+}

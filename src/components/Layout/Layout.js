@@ -10,6 +10,7 @@ class Layout extends Component {
         this.state = {
             feedItems : feedData,
             users : users,
+            usersForStory : users,
             isSearching : false
         }
     }
@@ -87,6 +88,7 @@ class Layout extends Component {
                     users={this.state.users}
                 />
                 <Container
+                    users={this.state.usersForStory}
                     hideSearchBox = {this.hideSearchBoxHandler}
                     feedItems = {this.state.feedItems}
                     handleInput = {this.inputBtnColorChangeHandler}

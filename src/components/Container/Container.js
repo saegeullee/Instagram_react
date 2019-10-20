@@ -13,7 +13,9 @@ const container = props => (
             liked={props.liked}
             bookMarked={props.bookMarked}
         />
-        <Side />
+        <Side 
+            users={props.users}
+        />
     </div>
 
 )

@@ -1,0 +1,17 @@
+.FeedHeader {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__Profile{
+        display: flex;
+        align-items: center;
+    }
+
+    &__Menu {
+        height: 1.3rem;
+        width: 1.3rem;
+        margin-right: 1rem;
+    }
+}

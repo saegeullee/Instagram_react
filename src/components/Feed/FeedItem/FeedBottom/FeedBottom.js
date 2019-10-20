@@ -11,7 +11,7 @@ const feedBottom = props => {
     let comments = props.comments.map((el, idx) => <FeedComment key={idx} comment={el}/>)
     
     return(
-    <div>
+    <div> 
         <FeedEnage 
             id={props.id}
             isLiked={props.isLiked}
@@ -21,7 +21,7 @@ const feedBottom = props => {
         <FeedLikes />
         <FeedDescription />
         {comments}
-        <FeedDate />
+        <FeedDate /> 
         <FeedPostComment 
             id={props.id} 
             commentValue={props.commentValue}

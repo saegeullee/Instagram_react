@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React from "react"
 import FeedItem from "./FeedItem/FeedItem"
 
 const feed = props => {

@@ -1,8 +1,8 @@
 import React from "react"
 import FeedEngageItem from "./FeedEngageItem/FeedEngageItem"
-import classes from "./FeedEngage.module.css"
+import classes from "./FeedEngage.module.scss"
 
-const feedEngage = props => (
+const feedEngage = props => ( 
 
     <div className={classes.FeedEngage}>
         <div className={classes.FeedEngageLeft}>

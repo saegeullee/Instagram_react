@@ -1,5 +1,5 @@
 import React from "react"
-import classes from "./FeedLikes.module.css"
+import classes from "./FeedLikes.module.scss"
 
 const feedLikes = props => (
 

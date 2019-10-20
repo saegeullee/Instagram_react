@@ -3,16 +3,20 @@ import StoryItem from "./StoryItem/StoryItem"
 import StoryHeader from "./StoryHeader/StoryHeader"
 import classes from "./Story.module.css"
 
-const story = props => (
-    <div className={classes.Story}>
-        <StoryHeader />
-        <StoryItem />
-        <StoryItem />
-        <StoryItem />
-        <StoryItem />
-        <StoryItem />
-        <StoryItem />
-    </div>
-)
+const story = props => {
+
+    let storyItems = []
+
+    storyItems = props.users.map(el => <StoryItem name={el.name}/>)
+    
+    return(
+        <div className={classes.Story}>
+            <StoryHeader />
+            <div className={classes.StoryItems}>
+                {storyItems}
+            </div>
+        </div>
+    )
+}
 
 export default story

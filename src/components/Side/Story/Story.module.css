@@ -1,9 +1,18 @@
 .Story {
     margin-top: 1.5rem;
     width: 30rem;
-    height: 22rem;
+    height: auto;
     background-color: #fff;
     border: 1px solid #f0eeee;
     border-radius: 3px;
+}
+
+.StoryItems {
     overflow-y: scroll;
+    width: 30rem;
+    height: 22rem;
+    background-color: #fff;
+    border: 1px solid #f0eeee;
+    border-top: none;
+    border-radius: 3px;
 }

@@ -7,7 +7,7 @@ const storyItem = props => (
     <div className={classes.StoryItem}>
         <ProfileImg size="small" />
         <div className={classes.StoryItemInfo}>
-            <span className={classes.StoryItemName}>saegeullee</span>
+            <span className={classes.StoryItemName}>{props.name}</span>
             <span className={classes.StoryItemTime}>11시간전</span>
         </div>
     </div>

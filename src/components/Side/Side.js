@@ -7,7 +7,9 @@ import classes from "./Side.module.css"
 const side = props => (
     <div className={classes.Side}>
         <Profile />
-        <Story />
+        <Story 
+            users={props.users}
+        />
         <Recommendation />
     </div>
 )
