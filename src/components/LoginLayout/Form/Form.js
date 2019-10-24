@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import classes from "./Form.module.css"
 
 const form = props => {
@@ -11,7 +10,7 @@ const form = props => {
                     <input type="text" 
                         onChange={props.emailInput}
                         className={classes.LoginInput} 
-                        placeholder="전화번호, 사용자 이름 또는 이메일" >
+                        placeholder="전화번호, 사용자 이름 또는 이메일">
                     </input>
                 </div>
                 <div>
@@ -22,10 +21,10 @@ const form = props => {
                     </input>
                 </div>
             </div>
-            <Link to="/home"
+            <button
                 disabled={!props.bothFilled}
                 className={props.bothFilled ? classes.LoginFormBtnActive : classes.LoginFormBtn}
-                onClick={props.clicked}>로그인</Link>
+                onClick={props.clicked}>로그인</button>
         </>
     )
 }

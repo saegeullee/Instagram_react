@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import { withRouter } from 'react-router-dom'
 import classes from "./LoginLayout.module.css"
 import LogoImg from "../../images/logo.png"
 import Form from "./Form/Form"
@@ -16,7 +17,7 @@ class LoginLayout extends Component {
     }
 
     loginBtnClickedHandler = () => {
-        
+        this.props.history.push('/home')
     }
 
     loginBtnColorIndentifier = () => {
@@ -59,4 +60,4 @@ class LoginLayout extends Component {
     }
 }
 
-export default LoginLayout
+export default withRouter(LoginLayout)

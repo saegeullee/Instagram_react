@@ -16,7 +16,7 @@
 }
 
 .LoginFormBtn {
-    max-width: 100%;
+    width: 100%;
     margin-top: 1rem;
     padding: .8rem 1rem;
     background-color: #c4e0fb;
@@ -32,7 +32,7 @@
 
 .LoginFormBtnActive {
     background-color: #3897f0;
-    max-width: 100%;
+    width: 100%;
     margin-top: 1rem;
     padding: .8rem 1rem;
     display: block;
