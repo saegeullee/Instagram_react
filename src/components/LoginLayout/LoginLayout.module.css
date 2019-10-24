@@ -7,7 +7,7 @@
 .LoginSection {
     background-color: #fff;
     width: 35rem;
-    height: 40rem;
+    height: auto;
     border: 1px solid #e6e6e6;
     border-radius: 1px;
     padding: 10px 0;

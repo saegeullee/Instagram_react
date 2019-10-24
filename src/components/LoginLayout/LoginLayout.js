@@ -1,5 +1,6 @@
 import React, {Component} from "react"
-import { withRouter } from 'react-router-dom'
+import { withRouter } from "react-router-dom"
+import axios from "axios"
 import classes from "./LoginLayout.module.css"
 import LogoImg from "../../images/logo.png"
 import Form from "./Form/Form"
@@ -12,12 +13,42 @@ class LoginLayout extends Component {
         this.state = {
             email : "",
             password: "",
-            bothFilled: false
+            bothFilled: false,
+            isLogin : true,
+            isSignupSuccess : false
         }
     }
 
-    loginBtnClickedHandler = () => {
-        this.props.history.push('/home')
+    loginBtnClickHandler = () => {
+        const loginData = {
+            email : this.state.email,
+            password : this.state.password
+        }
+
+        axios.post('http://localhost:8000/account/login', loginData)
+            .then(response => {
+                console.log(response);
+                if(response.data.message === "LOGIN_SUCCESS") {
+                    this.props.history.push('/home')
+                 }
+            })
+    }
+
+    signupBtnClickHandler = () => {
+        const signupData = {
+            email : this.state.email,
+            password : this.state.password
+        }
+
+        axios.post('http://localhost:8000/account/signup', signupData)
+            .then(response => {
+                console.log(response);
+                console.log(response.data.message)
+                if(response.data.message === "SIGNUP_SUCCESS") {
+                    console.log("asdf")
+                    this.setState({email : "", password : "", isSignupSuccess : true})
+                }
+            })
     }
 
     loginBtnColorIndentifier = () => {
@@ -40,6 +71,10 @@ class LoginLayout extends Component {
         })
     }
 
+    loginSignupSwitchHanlder = () => {
+        this.setState((prevState) => ({isLogin : !prevState.isLogin, isSignupSuccess : false}))
+    }
+
     render() {
 
         return (
@@ -48,10 +83,17 @@ class LoginLayout extends Component {
                     <div className={classes.LoginWrapper}>
                         <img src={LogoImg} alt="" className={classes.Logo}></img>
                         <Form
-                            clicked={this.loginBtnClickedHandler}
+                            signupSuccess = {this.state.isSignupSuccess}
+                            emailVal = {this.state.email}
+                            passwordVal = {this.state.password}
+                            loginBtnClicked={this.loginBtnClickHandler}
+                            signupBtnClicked={this.signupBtnClickHandler}
                             emailInput={this.emailInputHandler} 
                             passwordInput={this.passwordInputHandler}
-                            bothFilled={this.state.bothFilled}/>
+                            bothFilled={this.state.bothFilled}
+                            isLogin={this.state.isLogin}
+                            loginSignupSwitch={this.loginSignupSwitchHanlder}
+                        />
                         <Others />
                     </div>
                 </div>
