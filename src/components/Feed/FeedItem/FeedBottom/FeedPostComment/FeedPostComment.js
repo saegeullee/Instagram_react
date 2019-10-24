@@ -13,8 +13,8 @@ const feedPostComment = props => (
             className={classes.FeedComment__Input} 
             onChange={(event) => props.handleInput(event, props.id)}></input>
         <button 
-            className={ props.commentValue!=="" ? classes.FeedComment__Btn___Activated :
-            classes.FeedComment__Btn___Deactivated}>게시</button>
+            className={ props.commentValue!=="" ? classes["FeedComment__Btn--Activated"] :
+            classes["FeedComment__Btn--Deactivated"]}>게시</button>
     </form>
 )
 

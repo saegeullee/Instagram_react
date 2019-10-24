@@ -13,7 +13,7 @@
         }
     }
 
-    &__Btn___Activated {
+    &__Btn--Activated {
         color: #0988ff;
         text-decoration: none;
         font-size: 1.4rem;
@@ -27,7 +27,7 @@
         border: none;
     }
 
-    &__Btn___Deactivated {
+    &__Btn--Deactivated {
         color: #cbe4fb;
         text-decoration: none;
         font-size: 1.4rem;
