@@ -7,7 +7,7 @@ const search = props => {
 
     let searchResults = []
 
-    searchResults = props.users.map(el => <SearchItem name={el.name}/>)
+    searchResults = props.users.map(el => <SearchItem key={el.name} name={el.name}/>)
 
     return (
         <div className={classes.SearchGroup}>

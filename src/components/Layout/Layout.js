@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import {withRouter} from "react-router-dom"
 import Toolbar from "../Navigation/Toolbar/Toolbar"
 import Container from "../Container/Container"
 import {feedData, users} from "../../data/data"
@@ -86,12 +87,17 @@ class Layout extends Component {
             this.setState({isMenuClicked: true})
         }
     }
+    
+    logoClickHandler = () => {  
+        this.props.history.push("/")
+    }
 
     render() {
 
         return(
             <div>
                 <Toolbar
+                    logoClicked={this.logoClickHandler}
                     hideTemporarilyShownElement = {this.hideTemporarilyShownElementsHandler}
                     isSearching = {this.state.isSearching}
                     searched = {this.searchHandler} 
@@ -112,4 +118,4 @@ class Layout extends Component {
         )
     }
 }
-export default Layout;
+export default withRouter(Layout);

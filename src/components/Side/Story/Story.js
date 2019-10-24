@@ -7,7 +7,7 @@ const story = props => {
 
     let storyItems = []
 
-    storyItems = props.users.map(el => <StoryItem name={el.name}/>)
+    storyItems = props.users.map(el => <StoryItem key={el.name} name={el.name}/>)
     
     return(
         <div className={classes.Story}>

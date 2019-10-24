@@ -7,7 +7,7 @@ import classes from "./Toolbar.module.css";
 const toolbar = props => (
     <header className={classes.Header} onClick={props.hideTemporarilyShownElement}>
         <div className={classes.HeaderContainer}>
-            <Logo /> 
+            <Logo logoClicked={props.logoClicked}/> 
             <Search 
                 users={props.users}
                 isSearching = {props.isSearching}
